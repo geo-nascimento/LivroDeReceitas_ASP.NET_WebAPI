@@ -1,6 +1,8 @@
 ﻿using MeuLivroDeReceitas.Application.Servicos.Critografia;
 using MeuLivroDeReceitas.Application.Servicos.Token;
+using MeuLivroDeReceitas.Application.Servicos.UsuarioLogado;
 using MeuLivroDeReceitas.Application.UseCases.Login.FazerLogin;
+using MeuLivroDeReceitas.Application.UseCases.Usuario.AlterarSenha;
 using MeuLivroDeReceitas.Application.UseCases.Usuario.Registrar;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +16,7 @@ public static class Botstrapper
         AdicionarUseCases(services);
         AdicionarTokenJwt(services, configuration);
         AdicionarChaveAdcionalSenha(services, configuration);
-        
+        AddUsuarioLogado(services);
     }
 
     private static void AdicionarChaveAdcionalSenha(IServiceCollection services, IConfiguration configuration)
@@ -33,6 +35,12 @@ public static class Botstrapper
     {
         services
             .AddScoped<IRegistrarUsuarioUseCase, RegistrarUsuarioUseCase>()
-            .AddScoped<ILoginUseCase, LoginUseCase>();
+            .AddScoped<ILoginUseCase, LoginUseCase>()
+            .AddScoped<IAlterarSenhaUseCase, AlterarSenhaUSeCase>();
+    }
+
+    private static void AddUsuarioLogado(IServiceCollection services)
+    {
+        services.AddScoped<IUsuarioLogado, UsuarioLogado>();
     }
 }

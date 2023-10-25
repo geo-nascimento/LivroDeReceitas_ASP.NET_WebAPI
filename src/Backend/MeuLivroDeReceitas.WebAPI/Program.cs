@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
+using AutoMapper;
 using MeuLivroDeReceitas.Application;
 using MeuLivroDeReceitas.Application.Servicos.AutoMapper;
 using MeuLivroDeReceitas.Domain.Extensions;
@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRouting(opt => opt.LowercaseUrls = true);
 builder.Services.AddControllers();
+builder.Services.AddHttpContextAccessor();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -19,8 +20,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddRepositorio(builder.Configuration);
 //Adicionar o filtro de exceção: garante que qualquer exceção lançada dentro da aoplicação será capturada
 builder.Services.AddMvc(c => c.Filters.Add(typeof(FiltroDasExceptions)));
+builder.Services.AddScoped<UsuarioAutenticadoAttribute>();
 //AutoMapper
-builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
+builder.Services.AddScoped(provider => new MapperConfiguration(cfg =>
 {
     cfg.AddProfile(new AutoMapperConfiguration());
 }).CreateMapper());

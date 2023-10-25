@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MeuLivroDeReceitas.Infrastructure.AcessoRepository.Repository;
 
-public class UsuarioRepositorio : IUsuarioReadOnly, IUsuarioWriteOnly
+public class UsuarioRepositorio : IUsuarioReadOnly, IUsuarioWriteOnly, IUsuarioUpdateOnly
 {
     private readonly LivroDeReceitasContext _db;
 
@@ -25,8 +25,24 @@ public class UsuarioRepositorio : IUsuarioReadOnly, IUsuarioWriteOnly
             .FirstOrDefaultAsync(u => u.Email.Equals(email) && u.Senha.Equals(senha));
     }
 
+    public async Task<Usuario> RecuperarPorEmail(string email)//Somente leitura
+    {
+        return await _db.Usuarios.AsNoTracking().FirstOrDefaultAsync(c => c.Email.Equals(email));
+    }
+
     public async Task Adicionar(Usuario usuario)
     {
         await _db.Usuarios.AddAsync(usuario);
+    }
+
+    public void Update(Usuario usuario)
+    {
+        _db.Usuarios.Update(usuario);
+        
+    }
+
+    public async Task<Usuario> RecuperarPorId(long id)
+    {
+        return await _db.Usuarios.FirstOrDefaultAsync(c => c.Id == id);
     }
 }

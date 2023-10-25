@@ -147,4 +147,13 @@
   <data name="LOGIN_INVALIDO" xml:space="preserve">
     <value>E-mail e/ou senha estão incorretos</value>
   </data>
+  <data name="SENHA_ATUAL_INVALIDA" xml:space="preserve">
+    <value>Senha atual é inválida</value>
+  </data>
+  <data name="TOKEN_EXPIRADO" xml:space="preserve">
+    <value>Token expirado. Faça o login novamente</value>
+  </data>
+  <data name="USUARIO_SEM_PERMISSAO" xml:space="preserve">
+    <value>Usuário não possui permissão</value>
+  </data>
 </root>

@@ -9,14 +9,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fda3e330-015f-41d2-9c49-1af64d24af2b" name="Changes" comment="" />
+    <list default="true" id="fda3e330-015f-41d2-9c49-1af64d24af2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Servicos/UsuarioLogado/IUsuarioLogado.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Servicos/UsuarioLogado/UsuarioLogado.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/AlterarSenha/AlterarSenhaUSeCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/AlterarSenha/AlterarSenhaValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/AlterarSenha/IAlterarSenhaUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/SenhaValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Domain/Repositories/IUsuarioUpdateOnly.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.WebAPI/Filtros/UsuarioAutenticadoAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shared/MeuLivroDeReceitas.Comunication/Request/RequestAlterarSenhaJson.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/USeCases.Test/Usuario/AlterarSenha/AlterarSenhaUseCaseTeste.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Utilitario.ParaTestes/Repositorios/UsuarioUpdateOnlyRepositorioBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Utilitario.ParaTestes/Requisicoes/RequisicaoAlterarSenhaUsuarioBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Utilitario.ParaTestes/UsuarioLogado/UsuarioLogadoBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Validators.Test/Usuario/AlterarSenha/AlterarSenhaValidatorTeste.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/WebAPI.Tests/V1/Usuario/AlterarSenha/AlterarSenhaTeste.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MeuLivroDeReceitas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MeuLivroDeReceitas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Botstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Botstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/MeuLivroDeReceitas.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/MeuLivroDeReceitas.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Servicos/Token/TokenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/Servicos/Token/TokenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/Registrar/RegistrarUsuarioValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Application/UseCases/Usuario/Registrar/RegistrarUsuarioValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Domain/Repositories/IUsuarioReadOnly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Domain/Repositories/IUsuarioReadOnly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/AcessoRepository/Repository/UsuarioRepositorio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/AcessoRepository/Repository/UsuarioRepositorio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/Bootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/Bootstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/MeuLivroDeReceitas.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.Infrastructure/MeuLivroDeReceitas.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.WebAPI/Controllers/UsuariosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.WebAPI/Controllers/UsuariosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/MeuLivroDeReceitas.WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/MeuLivroDeReceitas.Exceptions/ResourceMensagensDeErro.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/MeuLivroDeReceitas.Exceptions/ResourceMensagensDeErro.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/MeuLivroDeReceitas.Exceptions/ResourceMensagensDeErro.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/MeuLivroDeReceitas.Exceptions/ResourceMensagensDeErro.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/WebAPI.Tests/V1/ControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/WebAPI.Tests/V1/ControllerBase.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2048d5b61a78bef52894eecf448e34a883cb22e1abb6711e0eb6d690a3b0/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20f1b79db29fe0c6f7db42c4c4796268198a2c943e80e4185e1eb4c0c269ae4/SR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29d413ab2fdd934034e94d91ac54dad4fd453660b2fe63750ffc2b4b22879/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/789b158a98468e474a2af1348cfd47e7792de2ae2344f55a03ddf85b16699b/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -35,16 +70,21 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2WuWUxt9C0MwNInvRmNBwJFC4sI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -187,6 +227,10 @@
       <workItem from="1697742912877" duration="12751000" />
       <workItem from="1697823916765" duration="10075000" />
       <workItem from="1697937924721" duration="1228000" />
+      <workItem from="1698084615864" duration="11266000" />
+      <workItem from="1698100235208" duration="5737000" />
+      <workItem from="1698175710280" duration="11448000" />
+      <workItem from="1698252961156" duration="2042000" />
     </task>
     <servers />
   </component>

@@ -42,7 +42,7 @@ public class TokenController
     }
     
     //Validar o token
-    public void ValidarToken(string token)
+    public ClaimsPrincipal ValidarToken(string token)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         //Parametros de validação
@@ -55,13 +55,21 @@ public class TokenController
             ValidateAudience = false
         };
 
-        tokenHandler.ValidateToken(token, parametrosDeValidacao, out _);//out _ é pra ignorar o retorno
+        var claims = tokenHandler.ValidateToken(token, parametrosDeValidacao, out _);//out _ é pra ignorar o retorno
 
+        return claims;
     }
 
     private SymmetricSecurityKey SimeticKey()
     {
         var symetricKey = Convert.FromBase64String(_chaveDeSeguranca);
         return new SymmetricSecurityKey(symetricKey);
+    }
+
+    public string RecuperarEmail(string token)
+    {
+        var claims = ValidarToken(token);
+
+        return claims.FindFirst(EmailAlias).Value;
     }
 }
